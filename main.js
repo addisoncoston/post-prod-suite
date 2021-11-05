@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 // require('dotenv').config()
-const {app, BrowserWindow} = require("electron");
+const {app, BrowserWindow, Menu} = require("electron");
 
 
 const path = require('path');
@@ -8,11 +8,11 @@ const isDev = require('electron-is-dev');
 // var helper = require('./index.js');
 const { autoUpdater } = require('electron-updater');
 
+const isMac = process.platform === 'darwin'
 
 
 
-
-if (require('electron-squirrel-startup')) return app.quit();
+// if (require('electron-squirrel-startup')) return app.quit();
 
 function createWindow () {
   // Create the browser window.
@@ -76,3 +76,53 @@ if (isDev) {
 } else {
 	console.log('Running in production');
 }
+
+
+// const menu = Menu.buildFromTemplate([
+//   {
+//       label: 'Example',
+//       submenu: [
+//           {
+//               label: 'About This App',
+//               click: () =>
+//                   openAboutWindow({
+//                       icon_path: join(__dirname, 'icon.png'),
+//                       copyright: 'Copyright (c) 2015 rhysd',
+//                       package_json_dir: __dirname,
+//                       open_devtools: process.env.NODE_ENV !== 'production',
+//                   }),
+//           },
+//           {
+//               label: 'About This App (custom version entry)',
+//               click: () =>
+//                   openAboutWindow({
+//                       icon_path: join(__dirname, 'icon.png'),
+//                       copyright: 'Copyright (c) 2015 rhysd',
+//                       package_json_dir: __dirname,
+//                       use_version_info: [
+//                           ['my version entry 1', 'a.b.c'],
+//                           ['my version entry 2', 'x.y.z'],
+//                       ],
+//                   }),
+//           },
+//           {
+//               label: 'About This App (modal with close)',
+//               click: () =>
+//                   openAboutWindow({
+//                       icon_path: join(__dirname, 'icon.png'),
+//                       copyright: 'Copyright (c) 2015 rhysd',
+//                       package_json_dir: __dirname,
+//                       win_options: {
+//                           parent: w,
+//                           modal: true,
+//                       },
+//                       show_close_button: 'Close',
+//                   }),
+//           },
+//           {
+//               role: 'quit',
+//           },
+//       ],
+//   },
+// ]);
+// app.applicationMenu = menu;

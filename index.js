@@ -60,7 +60,7 @@ $("#adobeRepairButton").on("click", () => {
     // main.testing()
 });
 
-
+// $("#version").html(process.env.npm_package_version)
 
 
 ///Add to table is not complete - need to add 

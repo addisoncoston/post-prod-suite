@@ -1,15 +1,15 @@
 {
-  "name": "NFL Post Tools",
-  "version": "1.0.3",
+  "name": "nflposttools",
+  "version": "1.0.4",
   "description": "Fixes all your edit issues.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --publish always",
+    "dist": "electron-builder",
     "postinstall": "install-app-deps"
   },
-  "repository": "https://github.com/addisoncoston/nfl-la-adobe-repair",
+  "repository": "https://github.com/addisoncoston/post-prod-suite",
   "keywords": [
     "NFL"
   ],
