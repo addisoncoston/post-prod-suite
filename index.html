@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="assets/css/ekko-lightbox.min.css" rel="stylesheet">
+    <link href="assets/css/tether.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.theme.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="node_modules/font-awesome-animation/font-awesome-animation.min.css"> -->
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <br>
+    <div class="container"> 
+      <div class="row justify-content-center">
+
+        <div class="col">
+
+          <div class="card card-block text-center" >
+            <i class="fa fa-ambulance fa-5x faa-ambulance animated" aria-hidden="true" id="iconAdobeRepair"></i>
+            <div class="card-body">   
+              <h4 class="card-title">Settings Reset</h4>
+              <p id="adobeRepairText" class="card-text">Run this at the beginning of each shift and whenever you crash.</p>
+              
+              <div id="checkBoxes" class="text-left">
+                <div>
+                  <input type="checkbox" id="checkPrem" checked="checked">
+                  <label for="checkPrem">Reset Adobe Premiere</label>
+                </div>
+                
+                <div id="userSettingsDiv" class="text-center">
+                  <input type="checkbox" id="checkUserSettings" checked>
+                  <label for="checkUserSettings">Keep user settings</label>
+                </div>
+                
+                <div>
+                  <input type="checkbox" id="checkAe" checked>
+                  <label for="checkAe">Reset After Effects</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="checkAdobeCache"  class="data-toggle="modal" data-target="#adobeRepairModal">
+                  <label for="checkAdobeCache">Clear Adobe Cache</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="checkAudition" checked>
+                  <label for="checkAudition">Reset Audition</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="che ckStartupProj" checked>
+                  <label for="checkStartupProj">Startup project on desktop</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="checkExport" checked>
+                  <label for="checkExport">Install Export Presets</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="checkEditmate" checked>
+                  <label for="checkEditmate">Reset EditMate</label>
+                </div>
+
+                <div class="progress" id="progBarDiv">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progBar"></div>
+                </div>
+
+                <br>
+                <div id="buttonDiv" class="text-center">
+                  <button  id="adobeRepairButton" type="button" class="btn btn-primary" >Start</button>
+                </div>
+              </div>
+
+
+              <!-- <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="adobeRepairModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="adobeRepairModal">Clear Adobe Cache?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      This will delete the local media cache for Adobe Premiere. Are you sure you want to do this?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" id="adobeRepairButton" class="btn btn-primary">Confirm</button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- Modal -->
+              <!-- <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Adobe Repair</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p id="modalText"></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div> -->
+
+          </div>
+            
+
+          </div>
+
+          
+        </div>
+        
+        
+
+
+      </div>
+    </div>
+
+
+ 
+    
+
+
+  <!-- JavaScript
+    ================================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+  <script src="assets/js/tether.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/ekko-lightbox.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/typed.min.js"></script>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/fss.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+  <script src="./app/resetPremPrefs.js"></script>
+  <script src="./renderer.js"></script>
+  <script src="./index.js"></script>
+  
+</body>
+</html>

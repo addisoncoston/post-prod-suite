@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="assets/css/ekko-lightbox.min.css" rel="stylesheet">
+    <link href="assets/css/tether.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.theme.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/font-awesome-animation/font-awesome-animation.min.css">
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body style="-webkit-user-select: none; -web-app-region: drag">
+
+    <title id="title">Post Tools</title>
+
+
+<!-- Modal -->
+<div class="modal fade" id="adobeRepairModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Post Reset</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <br><br>
+    <div class="container cards cards-hover"> 
+      <div class="row justify-content-center">
+        <div class="col">
+
+        </div>
+        <div class="col">
+          
+          <div class="card card-block text-center" style="width: 18rem;" data-toggle="modal" data-target="#adobeRepairModal">
+            <!-- <img class="card-img-top" src="..." alt="AdobeRepair"> -->
+            <i class="fa fa-ambulance fa-5x faa-ambulance animated" aria-hidden="true" id="iconAdobeRepair"></i>
+            <div class="card-body">
+              <h4 class="card-title">Adobe Repair</h4>
+              <p id="adobeRepairText" class="card-text">Run this at the beginning of each shift and whenever you crash.</p>
+
+              <!-- <div>
+                <input type="checkbox" id="userCheckbox" checked>
+                <label for="userCheckbox">Maintain current user settings?</label>
+              </div> -->
+                  <!-- <input type="checkbox" aria-label="keep current user settings">Keep current user setting?</input> -->
+                  <!-- <div class="progress" id="progBarDiv">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" id="progBar"></div>
+                  </div> -->
+                  <!-- <br> -->
+              <!-- <button  id="adobeRepairButton" type="button" class="btn btn-primary">Start</button> -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- column3 -->
+        </div>
+      </div>
+    </div>
+
+
+      <!-- <div class="container cards cards-hover " > -->
+        <!-- <div class="row row justify-content-center"> -->
+
+          <!-- <div class="col-xs-3 col-lg-3" >
+            <a href="javascript:void(0)" onclick="main.resetPremPrefs(mainObj); main.editmateConfig(mainObj); main.resetAe(mainObj)" class="card-block-link" title="Adobe Repair">
+              <div class="card card-block text-center">
+                <i class="block-icon fa fa-ambulance" aria-hidden="true" id="iconAdobeRepair"></i>
+                <h4>Start Adobe Repair</h4>
+              </div>
+            </a>
+          </div> -->
+
+          <!-- <div class="col-xs-3 col-lg-3" >
+            <a href="#"  class="card-block-link" title="Adobe Repair">
+              <div class="card card-block text-center" onclick="load('startSpin'); main.resetPremPrefs(mainObj); main.editmateConfig(mainObj); main.resetAe(mainObj)">
+
+                <i class="block-icon fa fa-ambulance" aria-hidden="true" id="iconAdobeRepair"></i>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Default checkbox
+                  </label>
+                </div>
+                
+                <h4>Start Adobe Repair</h4>
+              </div>
+            </a>
+          </div> -->
+
+
+
+        <!-- </div> -->
+      <!-- </div> -->
+  
+      <!-- <div>
+        <label for="userCheckbox">Maintain current user settings?:</label> 
+        <input type="checkbox" id="userCheckbox" checked>
+      </div> -->
+      <!-- <div>
+        <button type="button" id="buttonRun" class="btn btn-primary" >Run Clean Up</button>
+        <button type="button" id="buttonEditmate" class="btn btn-primary">Run EditMate Config</button>
+      </div> -->
+    
+
+
+  <!-- JavaScript
+    ================================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+  <script src="assets/js/tether.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/ekko-lightbox.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/typed.min.js"></script>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/fss.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+  <script src="./app/resetPremPrefs.js"></script>
+  <script src="./renderer.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
+
+
+
+
+
+"provider": "github",
+"owner": "addisoncoston",
+"repo": "nfl-la-adobe-repair",
+"tag": "latest",
+"private": true,
+"releaseType": "release",
+"publishAutoUpdate": true
