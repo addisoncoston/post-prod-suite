@@ -2,6 +2,8 @@
 // require('dotenv').config()
 const {app, BrowserWindow, Menu} = require("electron");
 
+let Sentry = require('@sentry/electron')
+Sentry.init({ dsn: 'http://97cdbde87bb741fda5708a0ca96fdfbd@localhost:8000/1'})
 
 const path = require('path');
 const isDev = require('electron-is-dev');
@@ -18,14 +20,15 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 400,
-    height: 650,
+    height: 625,
     // frame: false,
-    titleBarStyle: 'default',
-    // titleBarOverlay: true,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      // preload: path.join(__dirname, 'preload.js'),
       contextIsolation: false,
-      nodeIntegration: true
+      nodeIntegration: true,
+      webviewTag: true
     }
   })
 
@@ -33,10 +36,18 @@ function createWindow () {
   mainWindow.loadFile('index.html')
   // mainWindow.loadURL('https://mp.nflnaravato.nfl.net')
 
+  mainWindow.setTitle('NFL Post Tools')
+  autoUpdater.checkForUpdatesAndNotify()
+
   
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
+
+// const view = new BrowserView()
+// mainWindow.setBrowserView(view)
+// view.setBounds({ x: 0, y: 0, width: 300, height: 300 })
+// view.webContents.loadURL('https://electronjs.org')
 
 
 // This method will be called when Electron has finished
@@ -44,7 +55,6 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow()
-  autoUpdater.checkForUpdatesAndNotify();
   
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the

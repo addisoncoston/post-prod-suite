@@ -7,6 +7,10 @@ let moment = require('moment-timezone')
 const exec = require('child_process').exec;
 // const { ipcMain, ipcRenderer } = require('electron')
 
+let Sentry = require('@sentry/electron')
+Sentry.init({ dsn: 'http://97cdbde87bb741fda5708a0ca96fdfbd@localhost:8000/1'})
+
+
 const { Table } = require("dynamo-light");
 const userTable = new Table("Library");
 
@@ -60,8 +64,8 @@ $("#adobeRepairButton").on("click", () => {
     // main.testing()
 });
 
-// $("#version").html(process.env.npm_package_version)
-
+$("#version").html(process.env.npm_package_version)
+$("#version").css('font-size', 10)
 
 ///Add to table is not complete - need to add 
 async function addToTable(input){
